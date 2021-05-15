@@ -32,11 +32,11 @@ export const BackgroundCutOut = styled.div`
   }
 
   @media screen and (max-width: 840px) {
-    clip-path: ellipse(90% 70% at 50% 0%);
+    clip-path: ellipse(90% 50% at 50% 0%);
   }
 
   @media screen and (max-width: 400px) {
-    clip-path: ellipse(60% 50% at 50% 0%);
+    clip-path: ellipse(90% 40% at 50% 0%);
   }
 `;
 

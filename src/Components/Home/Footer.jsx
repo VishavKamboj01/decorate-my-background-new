@@ -84,7 +84,12 @@ export default function Footer() {
           </LinkSection>
           <LinkSectionTemp>
             <LinkSectionHeading>Socials</LinkSectionHeading>
-            <Link>Instagram</Link>
+            <Link
+              href="https://www.instagram.com/vishav_kamboj01"
+              target="_blank"
+            >
+              Instagram
+            </Link>
             <Link>Linkedin</Link>
             <Link>Facebook</Link>
             <Link>Twitter</Link>
@@ -92,7 +97,7 @@ export default function Footer() {
         </LinkContainer>
       </FooterContent>
       <HorizontalLine />
-      <CopyRightText>&copy;2020 Vishav Kamboj</CopyRightText>
+      <CopyRightText>&copy;2021 Vishav Kamboj</CopyRightText>
     </FooterSection>
   );
 }
