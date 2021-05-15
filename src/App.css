@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "open_sansbold";
+  src: url("/src/fonts/webfontkit-20210515-041253/opensans-bold-webfont.woff2")
+      format("woff2"),
+    url("/src/fonts/webfontkit-20210515-041253/opensans-bold-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

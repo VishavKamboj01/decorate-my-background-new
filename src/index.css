@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-size: cover;
+}
+
+@font-face {
+  font-family: "OpenSans_bold";
+  src: local("OpenSans_bold"),
+    url("./fonts/webfontkit-20210515-041253/opensans-bold-webfont.woff2")
+      format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "OpenSans_regular";
+  src: local("OpenSans_regular"),
+    url("./fonts/webfontkit-20210515-041253/opensans-regular-webfont.woff2")
+      format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto_regular";
+  src: local("Roboto_regular"),
+    url("./fonts/webfontkit-20210515-041253/roboto-regular-webfont.woff2")
+      format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto_medium_italic";
+  src: local("Roboto_medium_italic"),
+    url("./fonts/webfontkit-20210515-041253/roboto-mediumitalic-webfont.woff2")
+      format("woff2");
+  font-weight: normal;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
