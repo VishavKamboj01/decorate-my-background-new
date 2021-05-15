@@ -181,6 +181,10 @@ export const LoginContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 450px) {
+    margin-top: 40px;
+  }
 `;
 
 export const Login = styled.p`
