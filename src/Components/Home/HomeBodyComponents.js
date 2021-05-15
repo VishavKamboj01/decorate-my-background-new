@@ -156,7 +156,7 @@ export const CardNote = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    bottom: -150px;
+    bottom: -170px;
     width: 80%;
   }
 `;

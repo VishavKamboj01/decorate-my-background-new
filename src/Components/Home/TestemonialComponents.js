@@ -7,7 +7,7 @@ export const TestimonialSection = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #efeae7;
-  padding-bottom: 200px;
+  padding-bottom: 140px;
 `;
 
 export const TestimonialHeading = styled.h1`

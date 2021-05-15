@@ -32,11 +32,11 @@ export const BackgroundCutOut = styled.div`
   }
 
   @media screen and (max-width: 840px) {
-    clip-path: ellipse(70% 70% at 50% 0%);
+    clip-path: ellipse(90% 70% at 50% 0%);
   }
 
   @media screen and (max-width: 400px) {
-    clip-path: ellipse(80% 50% at 50% 0%);
+    clip-path: ellipse(60% 50% at 50% 0%);
   }
 `;
 
@@ -75,7 +75,7 @@ export const RegisterForm = styled.div`
   background: white;
   width: 400px;
   padding-top: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   height: 370px;
   border: 2px solid #271b29;
   border-radius: 10px;
@@ -163,14 +163,14 @@ export const TermsText = styled.p`
 export const Register = styled.div`
   background: #ac3459;
   width: 40%;
-  height: 12%;
+  height: 13%;
   border-radius: 20px;
   outline: none;
   color: white;
   text-align: center;
   cursor: pointer;
   margin-top: 10px;
-  padding: 5px;
+  padding: 6px;
 
   @media screen and (max-width: 400px) {
     padding: 1px;
