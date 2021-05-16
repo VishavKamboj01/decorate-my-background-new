@@ -66,7 +66,7 @@ export const SearchCard = styled.div`
   }
 
   @media screen and (max-width: 420px) {
-    width: 500px;
+    width: 520px;
   }
 `;
 
@@ -86,6 +86,7 @@ export const SearchContainer = styled.div`
   width: 70%;
   @media screen and (max-width: 540px) {
     width: 90%;
+    transform: scale(1.05);
   }
 `;
 
@@ -147,6 +148,7 @@ export const ButtonsContainer = styled.div`
 
   @media screen and (max-width: 850px) {
     width: 100%;
+    transform: scale(1.05);
   }
 `;
 
