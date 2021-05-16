@@ -14,6 +14,7 @@ import {
   LoadingText,
 } from "./LoadingAnimation";
 import infinity from "../../icons/infinity.png";
+import Footer from "../Footer/Footer";
 
 export default function Categories(props) {
   const [data, setData] = useState({
@@ -99,6 +100,7 @@ export default function Categories(props) {
           <LoadingText>Fetching Data</LoadingText>
         </AnimationContainer>
       )}
+      <Footer />
     </div>
   );
 }

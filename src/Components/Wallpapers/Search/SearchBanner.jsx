@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import {
   ButtonsContainer,
-  ButtonSpan,
   ContainerCutout,
+  ButtonSpan,
   SearchBannerContainer,
   SearchBar,
   SearchButton,
@@ -12,11 +12,16 @@ import {
 } from "./SearchComponents";
 
 export default function SearchBanner(props) {
-  const [query, setQuery] = useState("");
+  const [data, setData] = useState({
+    query: "",
+    isSearchButtonClicked: false,
+  });
 
   const handleChange = (input) => {
     const q = input.currentTarget.value;
-    setQuery(q);
+    const dataTemp = { ...data };
+    dataTemp.query = q;
+    setData(dataTemp);
   };
 
   return (
@@ -28,14 +33,23 @@ export default function SearchBanner(props) {
           <SearchBar
             id="searchBar"
             name="searchBar"
-            value={query}
+            value={data.query}
             onChange={handleChange}
             placeholder="What are you looking for?"
           />
           <SearchButton
+            onAnimationEnd={() => {
+              const dataTemp = { ...data };
+              dataTemp.isSearchButtonClicked = false;
+              setData(dataTemp);
+            }}
+            animate={data.isSearchButtonClicked}
             onClick={() => {
-              props.onSearch(query);
-              setQuery("");
+              const dataTemp = { ...data };
+              dataTemp.query = "";
+              dataTemp.isSearchButtonClicked = true;
+              props.onSearch(data.query);
+              setData(dataTemp);
             }}
           >
             Search

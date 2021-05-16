@@ -23,6 +23,7 @@ import {
   faSignInAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Footer from "../Footer/Footer";
 
 export default function SignUp(props) {
   const [inputFeilds, setInputFeilds] = useState({
@@ -104,6 +105,7 @@ export default function SignUp(props) {
           />
         </LoginContainer>
       </RegisterFormContainer>
+      <Footer hidden="true" />
     </RegisterPage>
   );
 }

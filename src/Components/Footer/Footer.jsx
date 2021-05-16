@@ -23,10 +23,10 @@ import rightArrow from "../../icons/right-arrow.png";
 import icon from "../../icons/icon.png";
 import { Icon, Mark, Title } from "../Navbar/NavbarComponents";
 
-export default function Footer() {
+export default function Footer(props) {
   return (
     <FooterSection>
-      <RegisterBanner>
+      <RegisterBanner hidden={props.hidden}>
         <RegisterBannerHeading>
           Ready to try Backgrounds now?
         </RegisterBannerHeading>

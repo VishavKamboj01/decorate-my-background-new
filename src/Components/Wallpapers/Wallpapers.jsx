@@ -13,6 +13,7 @@ import {
 } from "../../Services/wallpaperService";
 import SearchBanner from "./Search/SearchBanner";
 import { Link } from "react-scroll";
+import Footer from "../Footer/Footer";
 
 export default function Wallpapers(props) {
   const [data, setData] = useState({
@@ -112,6 +113,7 @@ export default function Wallpapers(props) {
           <LoadingText>Fetching Data</LoadingText>
         </AnimationContainer>
       )}
+      <Footer />
     </div>
   );
 }

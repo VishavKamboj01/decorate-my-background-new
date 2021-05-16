@@ -23,6 +23,7 @@ export const RegisterBanner = styled.div`
   background: linear-gradient(90deg, #792c4a 0%, #bd4664 50%, #f7ab8f 100%);
   width: 60%;
   height: 120px;
+  display: ${(props) => (props.hidden === "true" ? "none" : "")};
 
   @media screen and (max-width: 1000px) {
     width: 80%;

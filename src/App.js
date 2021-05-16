@@ -7,7 +7,6 @@ import Categories from "./Components/Categories/Categories";
 import Login from "./Components/Login/Login";
 import SignUp from "./Components/SignUp/SignUp";
 import Home from "./Components/Home/Home";
-import Footer from "./Components/Footer/Footer";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -26,7 +25,6 @@ function App() {
           <Route path="/signup" component={SignUp} />
           <Route exact path="/" component={Home} />
         </Switch>
-        <Footer />
       </HashRouter>
     </div>
   );
