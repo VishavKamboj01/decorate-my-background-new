@@ -35,7 +35,7 @@ export default function Navbar(props) {
 
   return (
     <div style={{ position: "relative" }}>
-      <NavbarContainer>
+      <NavbarContainer id="navbar">
         <Mark>
           <Icon src={icon} />
           <Title>Backgrounds</Title>

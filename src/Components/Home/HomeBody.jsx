@@ -38,7 +38,6 @@ import rightArrow from "../../icons/right-arrow.png";
 import premium from "../../icons/premium.png";
 import { getRandomImages } from "../../Services/RandomImages";
 import Testimonials from "./Testimonials/Testimonials.jsx";
-import Footer from "./Footer/Footer.jsx";
 
 export default function HomeBody() {
   const [imageTracker, setImageTracker] = useState(0);
@@ -177,7 +176,6 @@ export default function HomeBody() {
         </ButtonsBanner>
       </SamplePageSection>
       <Testimonials />
-      <Footer />
     </Body>
   );
 }

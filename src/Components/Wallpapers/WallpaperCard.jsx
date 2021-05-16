@@ -53,7 +53,7 @@ export default function WallpaperCard(props) {
       <InfoContainer>
         <Container>
           <FontAwesomeIcon icon={faHeart} style={{ color: "gray" }} />
-          <ContainerText>100</ContainerText>
+          <ContainerText>{props.image.likes}</ContainerText>
         </Container>
         <Container>
           <FontAwesomeIcon icon={faComments} style={{ color: "gray" }} />
@@ -78,7 +78,7 @@ export default function WallpaperCard(props) {
             {current.screen}
           </Dropdown.Toggle>
 
-          <Dropdown.Menu style={{ transition: "0.2s ease" }}>
+          <Dropdown.Menu style={{ transition: "0.2s ease", margin: "0" }}>
             <Dropdown.Item onClick={() => handleItemClick("Small")}>
               Small
             </Dropdown.Item>

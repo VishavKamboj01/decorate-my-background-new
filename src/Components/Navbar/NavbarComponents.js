@@ -74,7 +74,7 @@ export const Link = styled(NavLink)`
   font-size: 0.9rem;
   display: inline-block;
   text-transform: uppercase;
-  font-family: OpenSans_regular;
+  font-family: roboto_regular;
 
   ::after {
     content: "";

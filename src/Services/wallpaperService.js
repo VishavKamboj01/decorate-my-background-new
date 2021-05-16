@@ -33,16 +33,16 @@ const unsplash = createApi({
 //   return wallpapers;
 // }
 
-export function getUnsplashWallpapers(
+export function searchWallpapers(
+  searchQuery,
   orientation,
-  category,
   currentPage,
   signal
 ) {
   const result = unsplash.search
     .getPhotos(
       {
-        query: category,
+        query: searchQuery,
         page: currentPage,
         perPage: 12,
         orientation: orientation,
@@ -57,10 +57,10 @@ export function getUnsplashWallpapers(
 }
 
 export function getCategoryPhotos(categoryId, currentPage, signal) {
-  const result = unsplash.collections
+  const result = unsplash.topics
     .getPhotos(
       {
-        collectionId: categoryId,
+        topicIdOrSlug: categoryId,
         page: currentPage,
         perPage: 12,
       },
@@ -74,7 +74,7 @@ export function getCategoryPhotos(categoryId, currentPage, signal) {
 }
 
 export function getUnsplashCategories(currentPage, signal) {
-  const result = unsplash.collections
+  const result = unsplash.topics
     .list(
       {
         page: currentPage,

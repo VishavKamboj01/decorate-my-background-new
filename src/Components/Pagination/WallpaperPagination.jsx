@@ -17,8 +17,9 @@ export default function WallpaperPagination(props) {
   return (
     <div className={classes.root}>
       <Pagination
+        page={props.currentPage}
         onChange={props.onChange}
-        style={{ margin: "auto" }}
+        style={{ margin: "auto", marginBottom: "80px" }}
         count={props.numberOfPages}
         color="standard"
       />
