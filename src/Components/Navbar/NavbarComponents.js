@@ -57,7 +57,7 @@ export const Title = styled.p`
   color: lightgray;
   margin-left: 4px;
   font-family: OpenSans_regular;
-  padding-top: 8px;
+  padding-top: 15px;
   font-size: 1.2rem;
 `;
 
@@ -71,6 +71,7 @@ export const Link = styled(NavLink)`
   justify-self: center;
   margin-right: 10px;
   line-height: -5px;
+  font-size: 0.9rem;
   display: inline-block;
   text-transform: uppercase;
   font-family: OpenSans_regular;
@@ -79,7 +80,7 @@ export const Link = styled(NavLink)`
     content: "";
     position: absolute;
     width: 100%;
-    height: 0.1rem;
+    height: 0.07rem;
     background: linear-gradient(90deg, #ac3459 0%, #ee9984 100%);
     left: 0;
     bottom: 0;

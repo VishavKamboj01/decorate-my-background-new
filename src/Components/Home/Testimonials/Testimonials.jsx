@@ -16,14 +16,14 @@ import {
   TestimonialSection,
   TwitterIcon,
 } from "./TestemonialComponents";
-import person1 from "../../images/person1.jpg";
-import person2 from "../../images/person2.jpg";
-import person3 from "../../images/person3.jpg";
-import comma from "../../icons/comma.png";
-import instagram from "../../icons/instagram.png";
-import facebook from "../../icons/facebook.png";
-import linkedin from "../../icons/linkedin.png";
-import twitter from "../../icons/twitter.png";
+import person1 from "../../../images/person1.jpg";
+import person2 from "../../../images/person2.jpg";
+import person3 from "../../../images/person3.jpg";
+import comma from "../../../icons/comma.png";
+import instagram from "../../../icons/instagram.png";
+import facebook from "../../../icons/facebook.png";
+import linkedin from "../../../icons/linkedin.png";
+import twitter from "../../../icons/twitter.png";
 export default function Testimonials() {
   return (
     <TestimonialSection>

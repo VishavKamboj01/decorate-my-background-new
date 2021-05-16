@@ -36,9 +36,9 @@ import anonymous from "../../images/image_1.jpg";
 import leftArrow from "../../icons/left-arrow.png";
 import rightArrow from "../../icons/right-arrow.png";
 import premium from "../../icons/premium.png";
-import { getRandomImages } from "./RandomImages";
-import Testimonials from "./Testimonials.jsx";
-import Footer from "./Footer.jsx";
+import { getRandomImages } from "../../Services/RandomImages";
+import Testimonials from "./Testimonials/Testimonials.jsx";
+import Footer from "./Footer/Footer.jsx";
 
 export default function HomeBody() {
   const [imageTracker, setImageTracker] = useState(0);

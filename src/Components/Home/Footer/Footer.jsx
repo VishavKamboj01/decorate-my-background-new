@@ -18,10 +18,10 @@ import {
   HorizontalLine,
   CopyRightText,
 } from "./FooterComponents";
-import checkmark from "../../icons/checkmark.png";
-import rightArrow from "../../icons/right-arrow.png";
-import icon from "../../icons/icon.png";
-import { Icon, Mark, Title } from "../Navbar/NavbarComponents";
+import checkmark from "../../../icons/checkmark.png";
+import rightArrow from "../../../icons/right-arrow.png";
+import icon from "../../../icons/icon.png";
+import { Icon, Mark, Title } from "../../Navbar/NavbarComponents";
 
 export default function Footer() {
   return (
