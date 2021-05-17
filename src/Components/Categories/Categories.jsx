@@ -7,7 +7,6 @@ import {
 
 import CategoryGrid from "../Categories/CategoryGrid";
 import WallpaperPagination from "../Pagination/WallpaperPagination";
-import { CompareSharp } from "@material-ui/icons";
 import {
   AnimationContainer,
   LoadingImage,

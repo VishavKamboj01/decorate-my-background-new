@@ -15,7 +15,7 @@ export default function Grid(props) {
               className="col- text-center"
               style={{ margin: "auto", alignSelf: "center" }}
             >
-              <WallpaperCard onImageClick={handleImageClick} image={item} />
+              <WallpaperCard image={item} />
             </div>
           );
         })}
@@ -23,5 +23,3 @@ export default function Grid(props) {
     </div>
   );
 }
-
-const handleImageClick = (image) => {};

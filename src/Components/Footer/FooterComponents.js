@@ -9,6 +9,10 @@ export const FooterSection = styled.div`
   background-color: #121d31;
   width: 100%;
   height: 380px;
+
+  @media screen and (max-height: 374px) {
+    margin-top: 200px;
+  }
 `;
 
 export const RegisterBanner = styled.div`
@@ -103,7 +107,7 @@ export const FooterContent = styled.div`
   width: 60%;
   flex-direction: column;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 80px;
 
   @media screen and (max-width: 700px) {
     width: 80%;

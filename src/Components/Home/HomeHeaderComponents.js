@@ -28,17 +28,6 @@ const appearFromTop = keyframes`
   }
 `;
 
-const appearFromRight = keyframes`
-  0%{
-    opacity:0;
-    transform: translateX(50px);
-  }
-  100%{
-    opacity:1;
-    transform: translateX(0);
-  }
-`;
-
 //Header Components
 export const Header = styled.div`
   width: 100%;

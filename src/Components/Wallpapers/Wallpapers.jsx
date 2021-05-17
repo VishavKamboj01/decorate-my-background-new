@@ -23,13 +23,12 @@ export default function Wallpapers(props) {
   const [isDataReceived, setDataReceived] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
+  let match = props.match;
+  let categoryId = match.params.id;
+  if (categoryId === undefined) categoryId = "bo8jQKTaE0Y";
 
   useEffect(() => {
     const controller = new AbortController();
-    let match = props.match;
-    let categoryId = match.params.id;
-
-    if (categoryId === undefined) categoryId = "bo8jQKTaE0Y";
 
     const fetch = async () => {
       const { response } = await getCategoryPhotos(
@@ -59,7 +58,6 @@ export default function Wallpapers(props) {
         wallpapers: photos,
         numberOfPages: Math.ceil(totalPhotos / 12),
       };
-      console.log(response);
       setDataReceived(true);
       setData(data);
     };
@@ -77,7 +75,7 @@ export default function Wallpapers(props) {
     return function cleanUp() {
       controller.abort();
     };
-  }, [currentPage, searchQuery]);
+  }, [currentPage, searchQuery, categoryId]);
 
   const handlePageChange = (event, value) => {
     event.preventDefault();
@@ -86,7 +84,7 @@ export default function Wallpapers(props) {
   };
 
   const handleSearch = (query) => {
-    if (query.length !== 0) {
+    if (query.length !== 0 && query !== searchQuery) {
       setCurrentPage(1);
       setSearchQuery(query);
       setDataReceived(false);

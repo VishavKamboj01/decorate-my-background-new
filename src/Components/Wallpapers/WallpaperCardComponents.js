@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+export const CardAnimation = keyframes`
+  0%{
+    transfrom: translateY(-100px);
+  }
+  100%{
+    transfrom: translateY(0);
+  }
+`;
 
 export const WallpaperContainer = styled.div`
   width: 330px;
@@ -10,6 +19,8 @@ export const WallpaperContainer = styled.div`
   box-shadow: 0 0 5px gray;
   border-radius: 5px;
   margin-bottom: 20px;
+  animation-name: ${CardAnimation};
+  animation-duration: 1s;
 `;
 
 export const Wallpaper = styled.img`

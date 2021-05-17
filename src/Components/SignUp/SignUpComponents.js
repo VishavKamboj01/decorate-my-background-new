@@ -15,7 +15,6 @@ export const RegisterFormContainer = styled.div`
   z-index: 2;
   background: #efeae7;
   width: 100vw;
-  height: 100vh;
 `;
 
 export const BackgroundCutOut = styled.div`
@@ -32,7 +31,7 @@ export const BackgroundCutOut = styled.div`
   }
 
   @media screen and (max-width: 840px) {
-    clip-path: ellipse(90% 50% at 50% 0%);
+    clip-path: ellipse(90% 90% at 50% 0%);
   }
 
   @media screen and (max-width: 400px) {
@@ -160,20 +159,21 @@ export const TermsText = styled.p`
   }
 `;
 
-export const Register = styled.div`
+export const Register = styled.button`
   background: #ac3459;
   width: 40%;
   height: 13%;
+  border: 0;
   border-radius: 20px;
   outline: none;
   color: white;
   text-align: center;
-  cursor: pointer;
   margin-top: 10px;
   padding: 6px;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     padding: 1px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -181,6 +181,7 @@ export const LoginContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 
   @media screen and (max-width: 450px) {
     margin-top: 40px;

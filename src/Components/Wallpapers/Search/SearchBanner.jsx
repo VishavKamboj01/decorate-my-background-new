@@ -9,19 +9,49 @@ import {
   SearchCard,
   SearchHeading,
   SearchContainer,
+  WallpaperHeading,
 } from "./SearchComponents";
 
 export default function SearchBanner(props) {
   const [data, setData] = useState({
     query: "",
     isSearchButtonClicked: false,
+    showHeading: false,
   });
+
+  const [activeBannerButton, setActiveBannerButton] = useState("");
 
   const handleChange = (input) => {
     const q = input.currentTarget.value;
     const dataTemp = { ...data };
     dataTemp.query = q;
+    dataTemp.showHeading = false;
     setData(dataTemp);
+  };
+
+  const handleBannerItemClicked = (query) => {
+    if (activeBannerButton !== query) setActiveBannerButton(query);
+
+    const dataTemp = { ...data };
+    dataTemp.query = "";
+    dataTemp.showHeading = false;
+    setData(dataTemp);
+    props.onSearch(query);
+  };
+
+  const handleSearchClicked = () => {
+    const dataTemp = { ...data };
+    dataTemp.showHeading = true;
+    dataTemp.isSearchButtonClicked = true;
+    props.onSearch(data.query);
+    setData(dataTemp);
+    setActiveBannerButton("");
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSearchClicked();
+    }
   };
 
   return (
@@ -36,6 +66,7 @@ export default function SearchBanner(props) {
             value={data.query}
             onChange={handleChange}
             placeholder="What are you looking for?"
+            onKeyPress={handleKeyPress}
           />
           <SearchButton
             onAnimationEnd={() => {
@@ -44,25 +75,46 @@ export default function SearchBanner(props) {
               setData(dataTemp);
             }}
             animate={data.isSearchButtonClicked}
-            onClick={() => {
-              const dataTemp = { ...data };
-              dataTemp.query = "";
-              dataTemp.isSearchButtonClicked = true;
-              props.onSearch(data.query);
-              setData(dataTemp);
-            }}
+            onClick={handleSearchClicked}
           >
             Search
           </SearchButton>
         </SearchContainer>
 
         <ButtonsContainer>
-          <ButtonSpan>Latest</ButtonSpan>
-          <ButtonSpan>Top Rated</ButtonSpan>
-          <ButtonSpan>Featured</ButtonSpan>
-          <ButtonSpan>Our Picks</ButtonSpan>
+          <ButtonSpan
+            selected={activeBannerButton === "Latest" ? true : false}
+            onClick={() => handleBannerItemClicked("Latest")}
+          >
+            Latest
+          </ButtonSpan>
+          <ButtonSpan
+            selected={activeBannerButton === "Top Rated" ? true : false}
+            onClick={() => handleBannerItemClicked("Top Rated")}
+          >
+            Top Rated
+          </ButtonSpan>
+          <ButtonSpan
+            selected={activeBannerButton === "Featured" ? true : false}
+            onClick={() => handleBannerItemClicked("Featured")}
+          >
+            Featured
+          </ButtonSpan>
+          <ButtonSpan
+            selected={activeBannerButton === "High Quality" ? true : false}
+            onClick={() => handleBannerItemClicked("High Quality")}
+          >
+            Our Picks
+          </ButtonSpan>
         </ButtonsContainer>
       </SearchCard>
+      {data.showHeading && data.query !== "" ? (
+        <WallpaperHeading>
+          Search Results for "&nbsp;{data.query}&nbsp;"
+        </WallpaperHeading>
+      ) : (
+        ""
+      )}
     </SearchBannerContainer>
   );
 }

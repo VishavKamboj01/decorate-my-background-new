@@ -24,10 +24,10 @@ export const SearchBannerContainer = styled.div`
   justify-content: center;
   background: #271b29;
   position: relative;
-
+  /* 
   @media screen and (max-width: 600px) {
-    margin-bottom: 300px;
-  }
+    margin-bottom: 400px;
+  } */
 `;
 
 export const ContainerCutout = styled.div`
@@ -61,7 +61,7 @@ export const SearchCard = styled.div`
     width: 700px;
   }
   @media screen and (max-width: 600px) {
-    transform: scale(0.7);
+    transform: scale(0.72);
     width: 600px;
   }
 
@@ -156,10 +156,10 @@ export const ButtonSpan = styled.button`
   border-radius: 25px;
   padding: 2px 30px;
   font-family: monospace;
-  background: transparent;
+  background: ${(props) => (props.selected === true ? "white" : "transparent")};
   border: 2px solid white;
   box-shadow: 0 0 3px #eee;
-  color: white;
+  color: ${(props) => (props.selected === true ? "black" : "white")};
   transition: 0.3s ease-in-out;
   :hover {
     background: white;
@@ -168,5 +168,22 @@ export const ButtonSpan = styled.button`
 
   @media screen and (max-width: 420px) {
     padding: 2px 15px;
+  }
+`;
+
+export const WallpaperHeading = styled.h2`
+  font-size: 2.5rem;
+  position: absolute;
+  z-index: 5;
+  bottom: -350px;
+  font-family: Roboto_regular;
+  background-image: linear-gradient(90deg, #e188fc 0%, #84d4ff 100%);
+  background-clip: text;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.6rem;
   }
 `;
