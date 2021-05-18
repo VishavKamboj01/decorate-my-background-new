@@ -34,7 +34,7 @@ export const BackgroundCutOut = styled.div`
     clip-path: ellipse(90% 90% at 50% 0%);
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     clip-path: ellipse(90% 40% at 50% 0%);
   }
 `;
