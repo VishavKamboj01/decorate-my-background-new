@@ -13,7 +13,6 @@ const heartBeat = keyframes`
   100% {
     transform: scale(0.9);
   }
-}
 `;
 
 const appearFromTop = keyframes`

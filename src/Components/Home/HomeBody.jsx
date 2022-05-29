@@ -39,7 +39,7 @@ import premium from "../../icons/premium.png";
 import { getRandomImages } from "../../Services/RandomImages";
 import Testimonials from "./Testimonials/Testimonials.jsx";
 
-export default function HomeBody() {
+export default function HomeBody(props) {
   const [imageTracker, setImageTracker] = useState(0);
   const [sampleWallpapers, setSampleWallpapers] = useState([]);
   const [isLeftArrowClicked, setLeftArrowClicked] = useState(false);
@@ -84,16 +84,16 @@ export default function HomeBody() {
               <Icon src={fastDownloads}></Icon>
               <CardHeading>High Speed Downloads</CardHeading>
               <CardText>
-                Lorem ipsum dolor sit ametsect etur adipisicing elit. Ipsa atque
-                esse sit, aut debitis numquam alias?
+                Unlock the power of high speed downloading by getting premium
+                and download your favourite wallpapers instantly.
               </CardText>
             </InfoCard>
             <InfoCard>
               <Icon src={hd}></Icon>
               <CardHeading>Immeasureable Quality</CardHeading>
               <CardText>
-                Lorem ipsum dolor sit ametsectetur adipisicing elit. Ipsa atque
-                esse sit, aut debitis numquam alias?
+                Wallpapers getting blurry? Don't worry just a quick registration
+                is required and the 4k wallpapers can be yours.
               </CardText>
             </InfoCard>
           </IconCombo>
@@ -102,16 +102,16 @@ export default function HomeBody() {
               <Icon src={unlimited}></Icon>
               <CardHeading>Unlimited Wallpapers</CardHeading>
               <CardText>
-                Lorem ipsum dolor sit ametsectetur adipisicing elit. Ipsa atque
-                esse sit, aut debitis numquam alias?
+                Out of wallpapers? if you are no problem we got your back. Get
+                unlimited content within a small amount of time get premium now.
               </CardText>
             </InfoCard>
             <InfoCard>
               <Icon src={newIcon}></Icon>
               <CardHeading>New Additions EveryDay</CardHeading>
               <CardText>
-                Lorem ipsum dolor sit ametsectetur adipisicing elit. Ipsa atque
-                esse sit, aut debitis numquam alias?
+                If same old content is bugging you no need to worry here on
+                Backgrounds we add new wallpapers every single day.
               </CardText>
             </InfoCard>
           </IconCombo>
@@ -120,8 +120,8 @@ export default function HomeBody() {
           <CardNoteIcon src={premium} />
           <CardNoteHeading>Premium Access</CardNoteHeading>
           <CardNoteText>
-            Only the registered users will get above the benefits. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit.
+            Get Registered now and get all the above benefits with just a one
+            step process. Hit the register now buttom to know more.
           </CardNoteText>
           <RegisterButtom to="/signUp">Register Now</RegisterButtom>
         </CardNote>
@@ -175,7 +175,7 @@ export default function HomeBody() {
           )}
         </ButtonsBanner>
       </SamplePageSection>
-      <Testimonials />
+      <Testimonials currentUser={props.currentUser} />
     </Body>
   );
 }

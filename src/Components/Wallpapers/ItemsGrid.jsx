@@ -15,7 +15,7 @@ export default function Grid(props) {
               className="col- text-center"
               style={{ margin: "auto", alignSelf: "center" }}
             >
-              <WallpaperCard image={item} />
+              <WallpaperCard image={item} currentUser={props.currentUser} />
             </div>
           );
         })}

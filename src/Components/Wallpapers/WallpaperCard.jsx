@@ -84,8 +84,13 @@ export default function WallpaperCard(props) {
             <Dropdown.Item onClick={() => handleItemClick("Medium")}>
               Medium
             </Dropdown.Item>
-            <Dropdown.Item onClick={() => handleItemClick("4k")}>
-              4k
+            <Dropdown.Item
+              disabled={Object.keys(props.currentUser).length === 0}
+              onClick={() => handleItemClick("4k")}
+            >
+              {Object.keys(props.currentUser).length === 0
+                ? "4k (Login Required)"
+                : "4k"}
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>

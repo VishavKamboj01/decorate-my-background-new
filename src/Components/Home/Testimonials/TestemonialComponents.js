@@ -1,13 +1,15 @@
 import styled from "styled-components";
+import { TextField } from "@material-ui/core";
 
 export const TestimonialSection = styled.div`
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #efeae7;
   padding-bottom: 140px;
+  position: relative;
 `;
 
 export const TestimonialHeading = styled.h1`
@@ -52,7 +54,7 @@ export const Testimonial = styled.div`
   position: relative;
   border-radius: 10px;
   box-shadow: 0 0 20px lightGray;
-  width: 400px;
+  width: 350px;
   flex-direction: column;
   background: white;
   padding: 20px 30px;
@@ -113,6 +115,8 @@ export const ImagePersonName = styled.h5`
 
 export const PersonResponse = styled.p`
   color: grey;
+  height: 150px;
+  overflow: hidden;
   font-family: OpenSans_regular;
   padding-bottom: 10px;
 `;
@@ -166,5 +170,123 @@ export const FacebookIcon = styled.img`
 
   :hover {
     transform: scale(1.1);
+  }
+`;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+`;
+
+export const ViewMoreButton = styled.button`
+  width: 200px;
+  height: 40px;
+  border: 2px solid black;
+  background: transparent;
+  outline: none;
+  font-family: monospace;
+  transition: 0.3s ease-in-out;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  :hover {
+    border: 0;
+    background: black;
+    color: white;
+  }
+`;
+
+export const YourExperienceButton = styled.button`
+  width: 200px;
+  height: 40px;
+  border: 0;
+  background: black;
+  outline: none;
+  color: white;
+  font-family: monospace;
+  transition: 0.3s ease-in-out;
+
+  :hover {
+    border: 2px solid black;
+    background: transparent;
+    color: black;
+  }
+`;
+
+export const ExperienceDialogBox = styled.div`
+  width: 45%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  position: absolute;
+  top: 100px;
+  z-index: 10;
+  box-shadow: 0 0 20px gray;
+`;
+
+export const TitleContainer = styled.div`
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #e188fc 0%, #84d4ff 100%);
+  position: relative;
+`;
+
+export const CloseImg = styled.img`
+  width: 30px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  cursor: pointer;
+`;
+
+export const Title = styled.p`
+  padding: 10px;
+  font-size: 1.5rem;
+  color: white;
+  width: 80%;
+  text-align: center;
+  font-family: OpenSans_regular;
+
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+  }
+`;
+
+export const CustomTextField = styled(TextField)`
+  & label.Mui-focused {
+    color: #e188fc;
+  }
+
+  & .MuiOutlinedInput-root {
+    &.Mui-focused fieldset {
+      border-color: #e188fc;
+    }
+  }
+`;
+
+export const SubmitButton = styled.button`
+  width: 75%;
+  height: 40px;
+  margin-top: 20px;
+  padding: 5px 10px;
+  background: linear-gradient(45deg, #e188fc 0%, #84d4ff 100%);
+  outline: none;
+  clip-path: polygon(2% 0%, 100% 0%, 98% 100%, 0% 100%);
+  border: 0;
+  color: white;
+  justify-self: center;
+  transition: 0.5s ease-in-out;
+  :hover {
+    clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
   }
 `;

@@ -14,6 +14,7 @@ const dropFromTop = keyframes`
   opacity:1;
   transform : translateY(0);
 }
+
 `;
 
 export const NavbarContainer = styled.div`
@@ -102,7 +103,7 @@ export const Link = styled(NavLink)`
     transition-timing-function: ease-in-out;
   }
 
-  @media (max-width: 769px) {
+  @media (max-width: 812px) {
     display: none;
   }
 `;
@@ -112,7 +113,7 @@ export const LoginSignUpContainer = styled.div`
   justify-content: center;
   font-family: Tisa, sans-serif;
 
-  @media (max-width: 769px) {
+  @media (max-width: 812px) {
     display: none;
   }
 `;
@@ -174,82 +175,8 @@ export const ButtonLink = styled(NavLink)`
   }
 `;
 
-// export const LoginButton = styled.button`
-//   color: whitesmoke;
-//   width: 10rem;
-//   border: 0;
-//   padding: 5px 20px;
-//   margin-right: 1rem;
-//   background-size: 200% auto;
-//   box-shadow: 0 0 10px #eee;
-//   border-radius: 20px;
-//   transition: 0.5s;
-
-//   background-image: linear-gradient(
-//     to right,
-//     #03a9f4 0%,
-//     #3f51b5 51%,
-//     #03a9f4 100%
-//   );
-
-//   :active {
-//     transform: scale(0.9);
-//     transition-duration: 0.05s;
-//     transition-timing-function: ease-in-out;
-//   }
-
-//   :hover {
-//     background-position: center right;
-//   }
-
-//   @media (max-width: 768px) {
-//     display: none;
-//   }
-
-//   @media (max-width: 890px) {
-//     width: 7rem;
-//   }
-// `;
-
-// export const SignUpButton = styled.button`
-//   color: whitesmoke;
-//   width: 10rem;
-//   border: 0;
-//   padding: 5px 20px;
-//   margin-right: 1rem;
-//   background-size: 200% auto;
-//   box-shadow: 0 0 10px #eee;
-//   border-radius: 20px;
-//   transition: 0.5s;
-
-//   background-image: linear-gradient(
-//     to right,
-//     #3f51b5 0%,
-//     #a1c4fd 51%,
-//     #3f51b5 100%
-//   );
-
-//   :active {
-//     transform: scale(0.9);
-//     transition-duration: 0.05s;
-//     transition-timing-function: ease-in-out;
-//   }
-
-//   :hover {
-//     background-position: right center;
-//   }
-
-//   @media (max-width: 768px) {
-//     display: none;
-//   }
-
-//   @media (max-width: 890px) {
-//     width: 7rem;
-//   }
-// `;
-
 export const MenuContainer = styled.div`
-  @media (min-width: 769px) {
+  @media (min-width: 812px) {
     display: none;
   }
   display: flex;
@@ -264,7 +191,7 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuContainerClicked = styled.div`
-  @media (min-width: 769px) {
+  @media (min-width: 812px) {
     display: none;
   }
   display: flex;
@@ -348,16 +275,14 @@ export const MobileNavbarContainer = styled.div`
   display: flex;
   position: absolute;
   flex-direction: column;
-
   z-index: 100;
-  align-items: center;
   transition: 0.5s ease-in;
   animation-name: ${dropFromTop};
   animation-duration: 0.5s;
   transform-origin: top;
   padding-bottom: 10px;
 
-  @media (min-width: 769px) {
+  @media (min-width: 812px) {
     display: none;
   }
 `;
@@ -368,14 +293,34 @@ export const MobileLinks = styled(NavLink)`
   display: flex;
   padding: 5px 10px;
   margin-top: 10px;
-  justify-self: center;
 
   :hover {
-    color: gray;
+    color: white;
     text-decoration: none;
   }
   :active {
     color: white;
     border-color: white;
   }
+`;
+
+export const UserBadge = styled.div`
+  display: flex;
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  font-family: monospace;
+  margin-top: 10px;
+
+  @media screen and (max-width: 812px) {
+    display: none;
+  }
+`;
+
+export const LogoutIcon = styled.img`
+  margin-left: 20px;
+  cursor: pointer;
+  width: 25px;
 `;

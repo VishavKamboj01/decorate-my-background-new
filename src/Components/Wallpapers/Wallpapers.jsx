@@ -96,7 +96,7 @@ export default function Wallpapers(props) {
       <SearchBanner onSearch={handleSearch} />
       {isDataReceived ? (
         <div>
-          <Grid items={data.wallpapers} />
+          <Grid items={data.wallpapers} currentUser={props.currentUser} />
           <Link to="navbar" smooth={true}>
             <WallpaperPagination
               numberOfPages={data.numberOfPages}

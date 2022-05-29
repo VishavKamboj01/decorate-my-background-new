@@ -10,7 +10,7 @@ export const CardAnimation = keyframes`
 `;
 
 export const WallpaperContainer = styled.div`
-  width: 330px;
+  width: 300px;
   height: 420px;
   display: flex;
   flex-direction: column;

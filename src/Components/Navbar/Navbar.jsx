@@ -16,9 +16,12 @@ import {
   MobileLinks,
   LoginSignUpContainer,
   ButtonLink,
+  UserBadge,
+  LogoutIcon,
 } from "./NavbarComponents";
 import icon from "../../icons/icon.png";
-
+import logout from "../../icons/logout.png";
+import ToolTip from "@material-ui/core/Tooltip";
 export default function Navbar(props) {
   const [isMenuClicked, setMenuClicked] = useState(false);
 
@@ -31,6 +34,11 @@ export default function Navbar(props) {
   const handleLinkClick = () => {
     const menuClicked = false;
     setMenuClicked(menuClicked);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    window.location = "/";
   };
 
   return (
@@ -53,15 +61,23 @@ export default function Navbar(props) {
             Wallpapers
           </Link>
         </NavLinks>
-
-        <LoginSignUpContainer>
-          {/* <ButtonLink className="nav-item nav-link" to="/login">
-            Login
-          </ButtonLink> */}
-          <ButtonLink className="nav-item nav-link" to="/signUp">
-            Register
-          </ButtonLink>
-        </LoginSignUpContainer>
+        {Object.keys(props.currentUser).length !== 0 ? (
+          <UserBadge>
+            Welcome {props.currentUser.userName}
+            <ToolTip title="Logout" arrow>
+              <LogoutIcon onClick={handleLogout} src={logout} />
+            </ToolTip>
+          </UserBadge>
+        ) : (
+          <LoginSignUpContainer>
+            <ButtonLink className="nav-item nav-link" to="/signUp">
+              Register
+            </ButtonLink>
+            <ButtonLink className="nav-item nav-link" to="/login">
+              Login
+            </ButtonLink>
+          </LoginSignUpContainer>
+        )}
 
         {!isMenuClicked ? (
           <MenuContainer onClick={handleMenuClick}>
@@ -84,12 +100,21 @@ export default function Navbar(props) {
           <MobileLinks onClick={handleLinkClick} to="/categories">
             Categories
           </MobileLinks>
-          {/* <MobileLinks onClick={handleLinkClick} to="/login">
-            Login
-          </MobileLinks> */}
-          <MobileLinks onClick={handleLinkClick} to="/signUp">
-            Register
-          </MobileLinks>
+
+          {Object.keys(props.currentUser).length === 0 ? (
+            <div>
+              <MobileLinks onClick={handleLinkClick} to="/signUp">
+                Register
+              </MobileLinks>
+              <MobileLinks onClick={handleLinkClick} to="/login">
+                Login
+              </MobileLinks>
+            </div>
+          ) : (
+            <MobileLinks to="" onClick={handleLogout}>
+              Logout
+            </MobileLinks>
+          )}
         </MobileNavbarContainer>
       ) : (
         ""

@@ -55,7 +55,7 @@ export const BenefitContainer = styled.div`
   display: flex;
   position: absolute;
   top: 75px;
-  left: 100px;
+  left: 180px;
 
   @media screen and (max-width: 800px) {
     display: none;

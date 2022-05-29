@@ -31,7 +31,7 @@ export const BackgroundCutOut = styled.div`
   }
 
   @media screen and (max-width: 840px) {
-    clip-path: ellipse(90% 90% at 50% 0%);
+    clip-path: ellipse(90% 60% at 50% 0%);
   }
 
   @media screen and (max-width: 500px) {
@@ -70,6 +70,7 @@ export const RegisterForm = styled.div`
   flex-direction: column;
   z-index: 2;
   align-items: center;
+  justify-content: center;
   margin-top: 50px;
   background: white;
   width: 400px;
@@ -78,6 +79,7 @@ export const RegisterForm = styled.div`
   height: 370px;
   border: 2px solid #271b29;
   border-radius: 10px;
+  margin-bottom: 50px;
 
   @media screen and (max-width: 600px) {
     width: 350px;
