@@ -5,7 +5,7 @@ import HomeHeader from "./HomeHeader";
 
 export default function Home(props) {
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       <HomeHeader />
       <HomeBody currentUser={props.currentUser} />
       <Footer hidden={Object.keys(props.currentUser).length !== 0} />

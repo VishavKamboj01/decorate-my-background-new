@@ -20,10 +20,11 @@ const dropFromTop = keyframes`
 export const NavbarContainer = styled.div`
   display: flex;
   background-color: #271b29;
-  width: 100vw;
+  width: 100%;
   height: 60px;
   align-items: center;
   justify-content: space-around;
+  overflow-x: hidden;
 
   @media (max-width: 900px) {
     justify-content: space-between;
