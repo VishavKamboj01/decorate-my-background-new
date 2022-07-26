@@ -1,13 +1,12 @@
 import http from "./httpService.js";
-
-const apiEndpoint = "http://localhost:3000/api";
+import { apiUrl } from "../config.json";
 
 function register(user) {
-  return http.post(apiEndpoint + "/users", user);
+  return http.post(apiUrl + "/users", user);
 }
 
 function login(user) {
-  return http.post("http://localhost:3000/api/auth", user);
+  return http.post(apiUrl + "/auth", user);
 }
 
 export { register, login };

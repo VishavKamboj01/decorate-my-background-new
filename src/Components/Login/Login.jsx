@@ -55,8 +55,9 @@ export default function Login(props) {
       window.location = "/";
     } catch (err) {
       setIsDialogOpen(false);
-      toast.error("Invalid email or Password");
-      console.log(err);
+      const parts = err.message.split(" ");
+      if (parts[parts.length - 1] === "400")
+        toast.error("Invalid Username or Password");
     }
   };
 
@@ -118,7 +119,7 @@ export default function Login(props) {
           </DialogTitle>
         </Dialog>
       </RegisterFormContainer>
-      <Footer hidden="true" />
+      <Footer hidden={true} />
     </RegisterPage>
   );
 }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const RegisterPage = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   background: #efeae7;
   position: relative;
 `;
@@ -24,14 +24,10 @@ export const BackgroundCutOut = styled.div`
   z-index: 1;
   height: 100vh;
   top: 0;
-  clip-path: ellipse(70% 54% at 50% 0%);
+  clip-path: ellipse(70% 40% at 50% 0%);
 
   @media screen and (max-width: 1100px) {
-    clip-path: ellipse(70% 60% at 50% 0%);
-  }
-
-  @media screen and (max-width: 840px) {
-    clip-path: ellipse(90% 60% at 50% 0%);
+    clip-path: ellipse(70% 45% at 50% 0%);
   }
 
   @media screen and (max-width: 500px) {

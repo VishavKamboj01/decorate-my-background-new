@@ -8,7 +8,7 @@ export const FooterSection = styled.div`
   align-items: center;
   background-color: #121d31;
   width: 100%;
-  height: 380px;
+  padding-bottom: 20px;
 
   @media screen and (max-height: 374px) {
     margin-top: 200px;
@@ -155,5 +155,5 @@ export const HorizontalLine = styled.span`
 
 export const CopyRightText = styled.p`
   color: gray;
-  margin-top: 12px;
+  margin-top: 25px;
 `;

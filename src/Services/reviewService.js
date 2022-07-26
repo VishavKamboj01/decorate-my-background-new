@@ -1,13 +1,12 @@
 import http from "./httpService.js";
-
-const apiEndpoint = "http://localhost:3000/api";
+import { apiUrl } from "../config.json";
 
 function getAllReviews() {
-  return http.get(apiEndpoint + "/reviews");
+  return http.get(apiUrl + "/reviews");
 }
 
 function saveReview(review) {
-  return http.post(apiEndpoint + "/reviews", review);
+  return http.post(apiUrl + "/reviews", review);
 }
 
 export { saveReview, getAllReviews };

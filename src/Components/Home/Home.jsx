@@ -8,7 +8,7 @@ export default function Home(props) {
     <div>
       <HomeHeader />
       <HomeBody currentUser={props.currentUser} />
-      <Footer />
+      <Footer hidden={Object.keys(props.currentUser).length !== 0} />
     </div>
   );
 }
