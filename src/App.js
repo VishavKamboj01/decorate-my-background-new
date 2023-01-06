@@ -46,8 +46,8 @@ function App() {
             )}
           />
           <Route path="/categories" component={Categories} />
+          <Route path="/signUp" component={SignUp} />
           <Route path="/login" component={Login} />
-          <Route path="/signup" component={SignUp} />
           <Route path="/:user" component={Home} />
           <Route
             exact
@@ -56,6 +56,7 @@ function App() {
           />
         </Switch>
       </HashRouter>
+    
     </div>
   );
 }

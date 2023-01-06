@@ -27,7 +27,8 @@ import Footer from "../Footer/Footer";
 import { toast } from "react-toastify";
 import Tooltip from "@material-ui/core/Tooltip";
 import { register } from "../../Services/userService";
-import Joi from "@hapi/joi";
+// import Joi from "@hapi/joi";
+// import Joi from "joi";
 import {
   Dialog,
   DialogTitle,
@@ -48,11 +49,11 @@ export default function SignUp(props) {
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  const schema = {
-    userName: Joi.string().min(5).required().label("Username"),
-    email: Joi.string().email().required().label("Email"),
-    password: Joi.string().min(8).required().label("Password"),
-  };
+  // const schema = {
+  //   userName: Joi.string().min(5).required().label("Username"),
+  //   email: Joi.string().email().required().label("Email"),
+  //   password: Joi.string().min(8).required().label("Password"),
+  // };
 
   const handleInputChange = (input) => {
     const inputs = { ...inputFeilds };
@@ -68,11 +69,11 @@ export default function SignUp(props) {
       password: inputFeilds.password,
     };
 
-    const { error } = Joi.validate(user, schema);
-    if (error) {
-      toast.error(error.details[0].message);
-      return;
-    }
+    // const { error } = Joi.validate(user, schema);
+    // if (error) {
+    //   toast.error(error.details[0].message);
+    //   return;
+    // }
     if (!inputFeilds.checkBox) {
       toast.error('"Terms and Conditions" must be checked');
       return;
